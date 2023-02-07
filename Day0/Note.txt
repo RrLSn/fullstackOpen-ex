@@ -1,0 +1,12 @@
+HTTP GET
+The browser and the web service communicate using the HTTP (Hypertext Transfer Protocol), HTTP is an application-layer for transmitting hypermedia document like HTML which is design for communication between the web browser and the web server.
+
+The Network Console tells how the web browser and the web server communicates. The Server sent a request and a response which are accomplained by different number of HEADER. 
+
+HEADER are lists of strings sent and received by the client program and server on every HTTP request and response
+
+The RESPONSE TAP show what the data sent in response to the request looks like.
+
+
+A TRADITIONAL WEB APPLICATION
+In TRADITIONAL WEB APPLICATIONS, the browser is "dumb", it only requests content in HTML form from the server, all the application logic is on the server. The server can be made, for example, in the manner of the already retired course Web server programming with Java Spring or with Python Flask or Ruby on Rails used in the database application . The example uses the Express library of Node.js. In the course,
