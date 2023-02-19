@@ -2,18 +2,26 @@ import React from 'react'
 import Part from './Part'
 
 const Content = () => {
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const parts = [
+  {
+    name: 'Fundamentals of React',
+    exercises: 10
+  },
+  {
+    name:'Using props to pass data',
+    exercises: 7
+  },
+  {
+    name:'State of a component',
+    exercises: 14
+  }
+]
 
     return(
         <div>
-          <Part part={part1} exercises={exercises1}/>
-          <Part part={part2} exercises={exercises2}/>
-          <Part part={part3} exercises={exercises3}/>
+          <Part part={parts.name} exercises={parts.exercises}/>
+          {/* <Part part={parts[1].name} exercises={parts[1].exercises2}/>
+          <Part part={parts[2].name} exercises={parts[2].exercises3}/> */}
         </div>
       )
 }
