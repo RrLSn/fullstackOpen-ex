@@ -5,12 +5,7 @@ const Display = (props) => {
     
   return (
     <div>
-        <p>Good: {props.resultG}</p>
-        <p>Neutral: {props.resultN}</p>
-        <p>Bad: {props.resultB}</p>
-        <p>All: {props.all}</p>
-        <p>Average: {props.average}</p>
-        <p>Positive: {props.positive}</p>
+        <p>{props.text} {props.result}</p>
     </div>
   )
 }

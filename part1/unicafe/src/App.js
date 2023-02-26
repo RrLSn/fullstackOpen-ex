@@ -25,13 +25,12 @@ function App() {
 
       <h1>Statistics</h1>
 
-      <Display 
-      resultG={good}
-      resultN={neutral}
-      resultB={bad}
-      all={All}
-      average={Average}
-      positive={Positive} />
+      <Display text='Good' result={good}/>
+      <Display text='Neutral' result={neutral}/>
+      <Display text='Bad' result={bad} />
+      <Display text='All' result={All} />
+      <Display text='Average' result={Average} />
+      <Display text='Positive' result={Positive} />
     </div>
   );
 }
