@@ -1,5 +1,5 @@
 import React from 'react'
-import Display from './Display'
+import StatisticLine from './StatisticLine'
 
 const AllDisplay = (props) => {
     if(props.All <= 0){
@@ -7,12 +7,12 @@ const AllDisplay = (props) => {
     }else{
         return (
             <div>
-                <Display text='Good' result={props.good}/>
-                <Display text='Neutral' result={props.neutral}/>
-                <Display text='Bad' result={props.bad} />
-                <Display text='All' result={props.All} />
-                <Display text='Average' result={props.Average} />
-                <Display text='Positive' result={props.Positive} />
+                <StatisticLine text='Good' result={props.good}/>
+                <StatisticLine text='Neutral' result={props.neutral}/>
+                <StatisticLine text='Bad' result={props.bad} />
+                <StatisticLine text='All' result={props.All} />
+                <StatisticLine text='Average' result={props.Average} />
+                <StatisticLine text='Positive' result={props.Positive} />
             </div>
           )
     }

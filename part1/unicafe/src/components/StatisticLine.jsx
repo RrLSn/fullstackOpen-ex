@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Display = (props) => {
+const StatisticLine = (props) => {
     
   return (
     <div>
@@ -9,4 +9,4 @@ const Display = (props) => {
   )
 }
 
-export default Display
+export default StatisticLine
