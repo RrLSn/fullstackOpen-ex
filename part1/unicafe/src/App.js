@@ -26,6 +26,7 @@ function App() {
 
       <h1>Statistics</h1>
 
+      <>
       <AllDisplay
       good={good}
       neutral={neutral}
@@ -33,6 +34,7 @@ function App() {
       All={All}
       Average={Average}
       Positive={Positive} />
+      </>
     </div>
   );
 }

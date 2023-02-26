@@ -6,14 +6,16 @@ const AllDisplay = (props) => {
         return 'No Feedback Given'
     }else{
         return (
-            <div>
+            <table>
+                <tbody>
                 <StatisticLine text='Good' result={props.good}/>
                 <StatisticLine text='Neutral' result={props.neutral}/>
                 <StatisticLine text='Bad' result={props.bad} />
                 <StatisticLine text='All' result={props.All} />
                 <StatisticLine text='Average' result={props.Average} />
                 <StatisticLine text='Positive' result={props.Positive} />
-            </div>
+                </tbody>
+            </table>
           )
     }
  
