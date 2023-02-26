@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Button from './components/Button';
-import Display from './components/Display';
+import AllDisplay from './components/AllDisplay';
 
 function App() {
   const [good, SetGood] = useState(0)
@@ -10,6 +10,7 @@ function App() {
   const All = (good + neutral + bad)
   const Average = (bad + neutral)/ good
   const Positive = (good * 100) /All + "%"
+
 
   return (
     <div className="App">
@@ -25,12 +26,13 @@ function App() {
 
       <h1>Statistics</h1>
 
-      <Display text='Good' result={good}/>
-      <Display text='Neutral' result={neutral}/>
-      <Display text='Bad' result={bad} />
-      <Display text='All' result={All} />
-      <Display text='Average' result={Average} />
-      <Display text='Positive' result={Positive} />
+      <AllDisplay
+      good={good}
+      neutral={neutral}
+      bad={bad}
+      All={All}
+      Average={Average}
+      Positive={Positive} />
     </div>
   );
 }
