@@ -13,19 +13,29 @@ function App() {
     'The only way to go fast, is to go well.'
   ]
 
+  const [selected, setSelected] = useState(0)
+
+  const [vote, setVote] = useState([0,0,0,0,0,0,0,0])
+  
   const handleClick = () => {
     const rand = Math.floor(Math.random() * anecdotes.length)
     setSelected(rand)
   }
 
-  
-   
-  const [selected, setSelected] = useState(0)
-
+  const handleVoteClick = () => {
+    const copyVote = [...vote]
+    copyVote[selected] = copyVote[selected]+1
+    setVote(copyVote)
+  }
+  console.log(vote,'hello')
   return (
-    <div style={{display: "flex", flexDirection: "column", placeItems:"center", alignItems:"center",padding:"10rem"}}>
+    <div style={{display: "flex", flexDirection: "column", placeItems:"center", alignItems:"center",padding:"10rem", textAlign:"center"}}>
       {anecdotes[selected]}
-      <button onClick={handleClick} style={{width:"10rem", height:"2rem"}}>Next anecdotes</button>
+      <p>has {vote[selected]} Votes</p>
+      <div style={{display: "flex", gap: "0.5rem"}}>
+        <button onClick={handleVoteClick} style={{width:"10rem", height:"2rem", cursor: "pointer"}}>Vote</button>
+        <button onClick={handleClick} style={{width:"10rem", height:"2rem",  cursor: "pointer"}}>Next anecdotes</button>
+      </div>
     </div>
   )
 }
