@@ -3,11 +3,11 @@ import React from 'react'
 const Total = ({course}) => {
   const exercises = course.parts
 
-  const arrs = exercises.map((exercise) => {
+  const exercisesArr = exercises.map((exercise) => {
     return exercise.exercises
   })
 
-  const sum = arrs.reduce((sum,arr) => {
+  const total = exercisesArr.reduce((sum,arr) => {
      sum += arr
      return sum
   },0)
@@ -16,7 +16,7 @@ const Total = ({course}) => {
     return(
         <div>
           <h4>
-            Total of {sum} exercises
+            Total of {total} exercises
           </h4>
         </div>
       )
