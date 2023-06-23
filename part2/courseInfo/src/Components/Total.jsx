@@ -1,11 +1,23 @@
 import React from 'react'
 
-const Total = (props) => {
+const Total = ({course}) => {
+  const exercises = course.parts
+
+  const arrs = exercises.map((exercise) => {
+    return exercise.exercises
+  })
+
+  const sum = arrs.reduce((sum,arr) => {
+     sum += arr
+     return sum
+  },0)
+  
+
     return(
         <div>
-          <p>
-            Number of Exercise is {props.parts[0].exercises1 + props.parts[1].exercises2 + props.parts[2].exercises3}
-          </p>
+          <h4>
+            Total of {sum} exercises
+          </h4>
         </div>
       )
 }

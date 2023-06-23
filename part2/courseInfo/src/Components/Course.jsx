@@ -1,4 +1,5 @@
 import React from 'react'
+import Total from './Total'
 
 const Course = ({course}) => {
   return (
@@ -9,6 +10,7 @@ const Course = ({course}) => {
                 return <p key={part.id}>{part.name} {part.exercises}</p>
             })
         }
+        <Total course={course}/>
     </div>
   )
 }
